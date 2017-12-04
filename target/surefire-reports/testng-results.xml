@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Tests" duration-ms="339" started-at="2017-12-04T04:03:47Z" finished-at="2017-12-04T04:03:48Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner$TestProductSearch.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.sits.amz.TestRunner$TestProductSearch@2096442d]" name="feature" class="com.sits.amz.TestRunner$TestProductSearch"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test1" duration-ms="339" started-at="2017-12-04T04:03:47Z" finished-at="2017-12-04T04:03:48Z">
+      <class name="com.sits.amz.TestRunner$TestProductSearch">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.sits.amz.TestRunner$TestProductSearch@2096442d]" name="setUpClass" is-config="true" duration-ms="151" started-at="2017-12-04T06:03:47Z" finished-at="2017-12-04T06:03:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.sits.amz.TestRunner$TestProductSearch@2096442d]" name="feature" duration-ms="44" started-at="2017-12-04T06:03:47Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-12-04T06:03:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Search Product]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.sits.amz.TestRunner$TestProductSearch@2096442d]" name="tearDownClass" is-config="true" duration-ms="30" started-at="2017-12-04T06:03:47Z" finished-at="2017-12-04T06:03:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.sits.amz.TestRunner$TestProductSearch -->
+      <class name="com.sits.amz.TestProductSearch">
+        <test-method status="PASS" signature="testProductSearchByKeyWord()[pri:0, instance:com.sits.amz.TestProductSearch@2c9f9fb0]" name="testProductSearchByKeyWord" duration-ms="6" started-at="2017-12-04T06:03:47Z" finished-at="2017-12-04T06:03:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSearchByKeyWord -->
+      </class> <!-- com.sits.amz.TestProductSearch -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Tests -->
+</testng-results>
