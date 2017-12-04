@@ -9,9 +9,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * Created by Mrudul Pendharkar on 03/12/17.
+ * Created by Mrudul Pendharkar
  */
-public class TestNgCucumberTestBase {
+public class TestRunner {
 
     @CucumberOptions(
             features = "src/test/resources/features",
