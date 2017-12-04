@@ -27,10 +27,10 @@ public class TestProductSearch extends TestNgTestBase {
 import org.testng.annotations.Test;
 
 /**
- * Created by Mrudul Pendharkar on 7/3/2017.
+ * Created by Mrudul Pendharkar
  */
 
-public class TestProductSearch extends TestNgCucumberTestBase {
+public class TestProductSearch extends TestRunner {
 
     private final static String productKeyWord = "Nikon";
     private final static String expectedProductTitle = "Nikon D3X";
