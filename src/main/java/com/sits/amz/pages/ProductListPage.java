@@ -34,6 +34,7 @@ public class ProductListPage extends Page{
 
     /**
      * Checks if optionText is available from list of options
+     * @param optionText : Option Text by which to sort results
      * @return True if optionText is available else False
      */
     public boolean containsOption(String optionText){
@@ -48,7 +49,8 @@ public class ProductListPage extends Page{
     }
 
     /**
-     * Sorts Result by Price
+     * Sorts Result by Option
+     * @param optionText : Option Text by which to sort results
      */
     public void sortBy(String optionText){
         Select sort_by_drop_down = getSortByDropDown();

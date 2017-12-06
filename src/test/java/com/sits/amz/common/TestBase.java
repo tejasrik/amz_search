@@ -13,11 +13,10 @@ import java.net.URL;
 public class TestBase {
 
     protected static URL gridHubUrl = null;
-    public String baseUrl;
     protected static Capabilities capabilities;
 
+    public String baseUrl;
     public WebDriver driver;
-
 
     /**
      *  Read Configuration files and initialise properties

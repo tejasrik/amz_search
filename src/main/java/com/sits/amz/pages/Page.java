@@ -19,8 +19,7 @@ public abstract class Page {
      * @param webDriver
      */
     public Page(WebDriver driver) {
-    this.driver = driver;
-    //syncHelper = new SyncHelper();
+        this.driver = driver;
     }
 
     public String getTitle() {
