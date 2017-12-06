@@ -4,6 +4,8 @@ import com.sits.amz.locators.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
@@ -14,18 +16,45 @@ import java.util.List;
  */
 public class ProductListPage extends Page{
 
+    @FindBy(xpath = Locators.ProductListPage.PRODUCT_KW)
+    @CacheLookup
+    private WebElement productListKeyword;
+
     public ProductListPage(WebDriver driver) {
         super(driver);
     }
 
     /**
-     * Sorts Result by Price
+     * Gets Text of Product List Keyword
+     * @return keyword text
      */
-    public void sortByPrice(){
+    public String getProductListKeywordText(){
+        return this.productListKeyword.getText();
+    }
+
+    /**
+     * Checks if optionText is available from list of options
+     * @return True if optionText is available else False
+     */
+    public boolean containsOption(String optionText){
         Select sort_by_drop_down = getSortByDropDown();
         List<WebElement> options = sort_by_drop_down.getOptions();
         for (WebElement option : options) {
-            if (option.getText().equals(Locators.ProductListPage.PRICE_HIGH_TO_LOW)) {
+            if (option.getText().toLowerCase().equals(optionText.toLowerCase())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Sorts Result by Price
+     */
+    public void sortBy(String optionText){
+        Select sort_by_drop_down = getSortByDropDown();
+        List<WebElement> options = sort_by_drop_down.getOptions();
+        for (WebElement option : options) {
+            if (option.getText().equals(optionText)) {
                 option.click();
                 break;
             }
@@ -44,6 +73,7 @@ public class ProductListPage extends Page{
 
         return PageFactory.initElements(driver, ProductDetailsPage.class);
     }
+
 
     /**
      * Verifies Price is sorted by Price

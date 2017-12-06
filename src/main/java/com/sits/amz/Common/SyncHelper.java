@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class SyncHelper {
 
-    protected static long timeoutInSecs = 450;
+    protected static long timeoutInSecs = 300;
 
     public static WebElement waitForElementToBeVisible(WebDriver driver, String locator){
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSecs);

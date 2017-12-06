@@ -8,19 +8,16 @@ Feature: Search Product
     Then I should see Search box
 
   Scenario: Product Listing
-    When I fill in "Nikon"
-    And I press Search button
+    When I fill in "Nikon" and press Search button
     Then I get List of "Nikon" Products
 
   Scenario: Product List Sorting
-    When I fill in "Nikon"
-    And I press Search button
+    When I fill in "Nikon" and press Search button
     And I get List of "Nikon" Products
     Then I See Option "Price: High to Low"
 
   Scenario: Product Details
-    When I fill in "Nikon"
-    And I press Search button
+    When I fill in "Nikon" and press Search button
     And I get List of "Nikon" Products
     And I Select Option "Price: High to Low"
     And I Select Second Product in List

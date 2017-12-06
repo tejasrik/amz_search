@@ -2,9 +2,6 @@ package com.sits.amz.common;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import ru.stqa.selenium.factory.WebDriverPool;
 
 import java.io.IOException;
@@ -13,19 +10,19 @@ import java.net.URL;
 /**
  * Base class for TestNG-based test classes
  */
-public class TestNgTestBase {
+public class TestBase {
 
     protected static URL gridHubUrl = null;
-    protected static String baseUrl;
+    public String baseUrl;
     protected static Capabilities capabilities;
 
-    protected WebDriver driver;
+    public WebDriver driver;
+
 
     /**
      *  Read Configuration files and initialise properties
      *  @throws IOException
      */
-    @BeforeSuite
     public void initTestSuite() throws IOException {
 
         SuiteConfiguration config = new SuiteConfiguration();
@@ -40,16 +37,14 @@ public class TestNgTestBase {
      *  Initialise Driver
      *
      */
-    @BeforeMethod
-    public void initWebDriver() {
-
+    public void initWebDriver()  {
+        System.out.println("InitWebDriver");
         driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities);
     }
 
     /**
      * Quit all browsers & Destroy driver
      */
-    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         WebDriverPool.DEFAULT.dismissAll();
     }

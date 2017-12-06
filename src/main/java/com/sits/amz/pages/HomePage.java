@@ -16,13 +16,24 @@ public class HomePage extends Page {
     private WebElement searchBox;
 
     public HomePage(WebDriver webDriver) {
+
         super(webDriver);
     }
 
+    /**
+     * Enters ProductKeyword and submits form.
+     *
+     * @param productKeyWord
+     * @return ProductListPage (containing list of products)
+     */
     public ProductListPage search_product(String productKeyWord){
         this.searchBox.sendKeys(productKeyWord);
         this.searchBox.submit();
         return PageFactory.initElements(driver, ProductListPage.class);
+    }
+
+    public boolean isSearchBoxVisible(){
+        return this.searchBox.isDisplayed();
     }
 
 }
