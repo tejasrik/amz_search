@@ -7,15 +7,6 @@ Feature: Search Product
     Given I am on "Amazon" page on URL "http://www.amazon.com"
     Then I should see Search box
 
-  Scenario: Product Listing
-    When I fill in "Nikon" and press Search button
-    Then I get List of "Nikon" Products
-
-  Scenario: Product List Sorting
-    When I fill in "Nikon" and press Search button
-    And I get List of "Nikon" Products
-    Then I See Option "Price: High to Low"
-
   Scenario: Product Details
     When I fill in "Nikon" and press Search button
     And I get List of "Nikon" Products
